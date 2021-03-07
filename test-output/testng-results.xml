@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="21445" started-at="2021-03-07T21:55:04 IST" finished-at="2021-03-07T21:55:25 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="21445" started-at="2021-03-07T21:55:04 IST" finished-at="2021-03-07T21:55:25 IST">
+      <class name="week1.day2.SAL3EditOppurtinities">
+        <test-method status="PASS" signature="browserName()[pri:0, instance:week1.day2.SAL3EditOppurtinities@462d5aee]" name="browserName" is-config="true" duration-ms="14" started-at="2021-03-07T21:55:04 IST" finished-at="2021-03-07T21:55:04 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserName -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:week1.day2.SAL3EditOppurtinities@462d5aee]" name="openBrowser" is-config="true" duration-ms="2242" started-at="2021-03-07T21:55:04 IST" finished-at="2021-03-07T21:55:06 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="loadurl()[pri:0, instance:week1.day2.SAL3EditOppurtinities@462d5aee]" name="loadurl" is-config="true" duration-ms="2524" started-at="2021-03-07T21:55:06 IST" finished-at="2021-03-07T21:55:09 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadurl -->
+        <test-method status="PASS" signature="editOppurtunities()[pri:0, instance:week1.day2.SAL3EditOppurtinities@462d5aee]" name="editOppurtunities" duration-ms="16653" started-at="2021-03-07T21:55:09 IST" finished-at="2021-03-07T21:55:25 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editOppurtunities -->
+      </class> <!-- week1.day2.SAL3EditOppurtinities -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
