@@ -15,7 +15,7 @@ public class SAL2CreateOppurtunities extends ProjectSpecificMethods {
 		
 		driver.findElementByXPath("//div[@title='New']").click();
 		
-		String opName ="Salesforce Automation by Mahesh";
+		String opName ="Salesforce Automation by Sara";
 		
 		driver.findElementByXPath("//span[@class='' and text()='Opportunity Name']/following::input[@class=' input' and @type='text' and @aria-required='true']").sendKeys(opName);
 		

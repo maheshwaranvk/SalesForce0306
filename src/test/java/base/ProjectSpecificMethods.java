@@ -19,10 +19,11 @@ public class ProjectSpecificMethods {
 	public static RemoteWebDriver driver;
 	public String browser;
 	public static JavascriptExecutor js;
-	public SoftAssert as;
+	public static SoftAssert as;
 @BeforeSuite
 	public void browserName() {
 	browser="chrome";
+	as = new SoftAssert();
 
 	}
 @BeforeTest
