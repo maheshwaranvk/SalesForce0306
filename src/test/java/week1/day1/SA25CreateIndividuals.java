@@ -46,7 +46,7 @@ public class SA25CreateIndividuals {
 		
 		
 		js.executeScript("arguments[0].click()", driver.findElementByXPath("//span[@one-appnavbarmenuitem_appnavbarmenuitem='' and text()='New Individual']"));
-		String lName = "Mahesh Kumar";
+		String lName = "sara";
 		driver.findElementByXPath("//input[@placeholder='Last Name']").sendKeys(lName);
 		driver.findElementByXPath("//button[@class='slds-button slds-button--neutral uiButton--brand uiButton forceActionButton']").click();
 		

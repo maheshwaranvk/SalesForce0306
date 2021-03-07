@@ -1,5 +1,6 @@
-package week1.day1;
+package week1.day2;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -11,9 +12,9 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class TestIt {
+public class SAL27DeleteIndividuals {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 WebDriverManager.chromedriver().setup();
 		
 		ChromeOptions options = new ChromeOptions();
@@ -36,10 +37,32 @@ WebDriverManager.chromedriver().setup();
 		js.executeScript("arguments[0].click()", ind);
 		
 		
-		js.executeScript("arguments[0].value='kumar'", driver.findElementByXPath("//input[@name='Individual-search-input']"));
+		js.executeScript("arguments[0].value='sara'", driver.findElementByXPath("//input[@name='Individual-search-input']"));
+		driver.findElementByXPath("//input[@name='Individual-search-input']").sendKeys(Keys.SPACE);
+	
+		js.executeScript("arguments[0].click()", driver.findElementByXPath("//button[@name='refreshButton']"));
 		
+		
+		Thread.sleep(3000);
+		
+		js.executeScript("arguments[0].click()", driver.findElementByXPath("(//a[@data-aura-class='forceOutputLookup'])[1]"));
+		driver.findElementByXPath("//span[text()='Details']").click();
+		driver.findElementByXPath("//button[@title='Edit Name']").click();
+		
+		String lName = driver.findElementByXPath("//input[@placeholder='Last Name']").getAttribute("value");
+		
+		driver.findElementByXPath("//div[@title='Delete']").click();
+		driver.findElementByXPath("//span[text()='Delete']").click();
+		
+		js.executeScript("arguments[0].value='sara'", driver.findElementByXPath("//input[@name='Individual-search-input']"));
 		driver.findElementByXPath("//input[@name='Individual-search-input']").sendKeys(Keys.SPACE);
 		js.executeScript("arguments[0].click()", driver.findElementByXPath("//button[@name='refreshButton']"));
-		driver.findElementsByXPath("//table[@data-aura-class='uiVirtualDataTable']//a[@data-aura-class='forceOutputLookup']");
-	}
+		
+		if(driver.findElementByXPath("//p[text()='No items to display.']").isEnabled()) {
+			System.out.println("Individuals Deleted");
+		}
+		else {
+			System.out.println("Individuals not Deleted");
+		}
+}
 }
