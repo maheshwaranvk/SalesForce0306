@@ -1,8 +1,5 @@
-package week1.day2;
+package individuals;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -13,10 +10,10 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class SAL29SortIndividuals {
+public class SAL28CreateIndividuals {
 
-	public static void main(String[] args) throws InterruptedException {
-
+	public static void main(String[] args) {
+		
 		WebDriverManager.chromedriver().setup();
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-notifications");
@@ -38,36 +35,23 @@ public class SAL29SortIndividuals {
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("arguments[0].click()", ind);
 		
+		driver.findElementByXPath("//div[@title='New']").click();
 		
-		List<WebElement> namesWE = driver.findElementsByXPath("//table[@data-aura-class='uiVirtualDataTable']//a[@data-refid='recordId']");
+		driver.findElementByXPath("//div[@class='salutation compoundTLRadius compoundTRRadius compoundBorderBottom form-element__row uiMenu']//a").click(); 
+		driver.findElementByXPath("//li[@class='uiMenuItem uiRadioMenuItem']/a[@title='Mr.']").click();
+		driver.findElementByXPath("//input[@placeholder='First Name']").sendKeys("Mahesh");
+		driver.findElementByXPath("(//span[@class=' label bBody' and text()='Save'])[2]").click();
 		
-		List<String> names = new ArrayList();		
-		
-		for (WebElement webElement : namesWE) {
-			names.add(webElement.getAttribute("title"));
+		if(driver.findElementByXPath("//li[@class='form-element__help' and text()='Complete this field.']").isEnabled())
+		{
+			System.out.println("(Complete this field) displayed for the Last Name");
+		}
+		else
+		{
+			
+			System.out.println("Alert is not displayed");
 		}
 		
-		Collections.sort(names);
-				
-		  driver.
-		  findElementByXPath("//span[@class='slds-truncate' and text()='Name']/..").
-		  click();
-		  Thread.sleep(3000);
-		 
-		  
-		  List<WebElement> namesWEAfterSort = driver.findElementsByXPath(
-		  "//table[@data-aura-class='uiVirtualDataTable']//a[@data-refid='recordId']");
-		  List<String> namesAfterSort = new ArrayList();
-		  
-		  for (WebElement webElement : namesWEAfterSort) {
-		  namesAfterSort.add(webElement.getAttribute("title")); }
-		 
-		  if(names.equals(namesAfterSort))
-		  {
-			  System.out.println("Individuals are sorted");		  }
-		 
 		
-	else
-	{System.out.println("Individuals are not sorted");}
-
-}}
+	}
+}

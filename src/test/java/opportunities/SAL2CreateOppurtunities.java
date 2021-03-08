@@ -1,4 +1,4 @@
-package week1.day2;
+package opportunities;
 
 
 import org.testng.annotations.Test;

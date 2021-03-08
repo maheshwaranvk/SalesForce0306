@@ -1,4 +1,4 @@
-package week1.day1;
+package individuals;
 //https://mercury-bootcamp.atlassian.net/browse/SAL-26
 
 import java.util.concurrent.TimeUnit;

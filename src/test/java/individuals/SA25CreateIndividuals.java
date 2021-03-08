@@ -1,4 +1,4 @@
-package week1.day1;
+package individuals;
 //https://mercury-bootcamp.atlassian.net/browse/SAL-25?atlOrigin=eyJpIjoiZjg1NmQ2YWZmYjBkNDM1MGE4OTY4ZGVlNjMwZDU0ZjMiLCJwIjoiaiJ9
 
 import java.util.concurrent.TimeUnit;

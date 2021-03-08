@@ -1,4 +1,4 @@
-package week1.day2;
+package opportunities;
 
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;

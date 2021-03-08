@@ -1,4 +1,4 @@
-package week1.day2;
+package individuals;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
