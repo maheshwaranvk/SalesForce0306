@@ -2,28 +2,28 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="22621" started-at="2021-03-08T13:00:07 IST" finished-at="2021-03-08T13:00:29 IST">
+  <suite name="Default suite" duration-ms="87901" started-at="2021-03-13T18:17:18 IST" finished-at="2021-03-13T18:18:46 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="22621" started-at="2021-03-08T13:00:07 IST" finished-at="2021-03-08T13:00:29 IST">
-      <class name="week1.day2.SAL3EditOppurtinities">
-        <test-method status="PASS" signature="browserName()[pri:0, instance:week1.day2.SAL3EditOppurtinities@462d5aee]" name="browserName" is-config="true" duration-ms="9" started-at="2021-03-08T13:00:07 IST" finished-at="2021-03-08T13:00:07 IST">
+    <test name="Default test" duration-ms="87901" started-at="2021-03-13T18:17:18 IST" finished-at="2021-03-13T18:18:46 IST">
+      <class name="opportunities.SAL6SortOppurtunities">
+        <test-method status="PASS" signature="browserName()[pri:0, instance:opportunities.SAL6SortOppurtunities@462d5aee]" name="browserName" is-config="true" duration-ms="9" started-at="2021-03-13T18:17:18 IST" finished-at="2021-03-13T18:17:18 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserName -->
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:week1.day2.SAL3EditOppurtinities@462d5aee]" name="openBrowser" is-config="true" duration-ms="3089" started-at="2021-03-08T13:00:07 IST" finished-at="2021-03-08T13:00:10 IST">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:opportunities.SAL6SortOppurtunities@462d5aee]" name="openBrowser" is-config="true" duration-ms="2252" started-at="2021-03-13T18:17:18 IST" finished-at="2021-03-13T18:17:20 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="loadurl()[pri:0, instance:week1.day2.SAL3EditOppurtinities@462d5aee]" name="loadurl" is-config="true" duration-ms="2473" started-at="2021-03-08T13:00:10 IST" finished-at="2021-03-08T13:00:12 IST">
+        <test-method status="PASS" signature="loadurl()[pri:0, instance:opportunities.SAL6SortOppurtunities@462d5aee]" name="loadurl" is-config="true" duration-ms="2274" started-at="2021-03-13T18:17:20 IST" finished-at="2021-03-13T18:17:22 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadurl -->
-        <test-method status="PASS" signature="editOppurtunities()[pri:0, instance:week1.day2.SAL3EditOppurtinities@462d5aee]" name="editOppurtunities" duration-ms="17037" started-at="2021-03-08T13:00:12 IST" finished-at="2021-03-08T13:00:29 IST">
+        <test-method status="PASS" signature="sortOpputunities()[pri:0, instance:opportunities.SAL6SortOppurtunities@462d5aee]" name="sortOpputunities" duration-ms="83352" started-at="2021-03-13T18:17:22 IST" finished-at="2021-03-13T18:18:46 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- editOppurtunities -->
-      </class> <!-- week1.day2.SAL3EditOppurtinities -->
+        </test-method> <!-- sortOpputunities -->
+      </class> <!-- opportunities.SAL6SortOppurtunities -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

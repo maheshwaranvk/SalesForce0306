@@ -60,6 +60,7 @@ public class SAL29SortIndividuals {
 		  List<String> namesAfterSort = new ArrayList();
 		  
 		  for (WebElement webElement : namesWEAfterSort) {
+			  
 		  namesAfterSort.add(webElement.getAttribute("title")); }
 		 
 		  if(names.equals(namesAfterSort))
