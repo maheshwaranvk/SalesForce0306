@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="opportunities.SAL6SortOppurtunities">
+      <class name="assessment.Assessment0314">
         <methods>
-          <include name="sortOpputunities"/>
+          <include name="assessmentMe0314"/>
           <include name="browserName"/>
           <include name="loadurl"/>
           <include name="openBrowser"/>
         </methods>
-      </class> <!-- opportunities.SAL6SortOppurtunities -->
+      </class> <!-- assessment.Assessment0314 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,18 +1,24 @@
 package base;
 
+import java.sql.Time;
+import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 import java.util.Map.Entry;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
@@ -25,6 +31,7 @@ public class ProjectSpecificMethods {
 	public String browser;
 	public static JavascriptExecutor js;
 	public static SoftAssert as;
+	public static WebDriverWait wait;
 	
 	
 @BeforeSuite
@@ -54,6 +61,7 @@ public void openBrowser() {
 		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		 js = (JavascriptExecutor)driver;
+		 driver.manage().deleteAllCookies();
 	}
 
 @BeforeClass
@@ -124,7 +132,21 @@ public static void datePicker(String date) {
 	Select year = new Select(driver.findElementByXPath("//select[@class='slds-select picklist__label']"));
 	year.selectByVisibleText(givenDate[2]);
 	driver.findElementByXPath("//table[@class='calGrid']//tr//span[text()='"+Integer.parseInt(givenDate[1])+"']").click();
+}
+
+public static void checkDisplay(String linkName) {
+	as.assertTrue(driver.findElementByXPath("//div[@class='cs-card tile']//a[text()='"+linkName+"']").isDisplayed());
+}
+
+public void waitForIt(String we) {
 	
-	
+	wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+	wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(we)));
+
+}
+
+public static void javaScriptClick(WebElement we) {
+	js.executeScript("arguments[0].click()", we);
+
 }
 }
