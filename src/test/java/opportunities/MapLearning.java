@@ -12,33 +12,51 @@ import java.util.Date;
 import java.util.Formatter;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
 import java.util.TimeZone;
 
 public class MapLearning {
 
 	public static void main(String[] args) throws FileNotFoundException, ParseException {
 		Map<String,Integer> months = new HashMap<String,Integer>();
-		months.put("January", 1);
-		months.put("February", 2);
-		months.put("March", 3);
-		months.put("April", 4);
+		months.put("Jan", 1);
+		months.put("Feb", 2);
+		months.put("Mar", 3);
+		months.put("Apr", 4);
 		months.put("May", 5);
-		months.put("June", 6);
-		months.put("July", 7);
-		months.put("August", 8);
-		months.put("September", 9);
-		months.put("October", 10);
-		months.put("November", 11);
-		months.put("December", 12);
+		months.put("Jun", 6);
+		months.put("Jul", 7);
+		months.put("Aug", 8);
+		months.put("Sept", 9);
+		months.put("Oct", 10);
+		months.put("Nov", 11);
+		months.put("Dec", 12);
 		
-		Integer integer = months.get("September");
-
-		
-		  Calendar c = Calendar.getInstance(); //13 Mar 2021 Time   
-			c.add(Calendar.DATE, 1); // 14 Mar 2021 Time
-			System.out.println(c.getTime());
+	Set<Entry<String, Integer>> entrySet = months.entrySet();
 	
-			DateFormat df = new SimpleDateFormat("MM/dd/yyyy");  
-			System.out.println(df.format(c.getTime()));
+		
+		
+Calendar c=	Calendar.getInstance();
+		c.add(Calendar.MONTH, 1);
+
+		/*
+		 * String [] date = new
+		 * SimpleDateFormat("MM/dd/yyyy").format(c.getTime()).toString().split("/");
+		 * System.out.println(Integer.parseInt(date[0]));
+		 */
+		
+		String[] split = c.getTime().toString().split(" ");
+		String a = "Apr 26 - Apr 30";
+		String b = "Mar 15 - Apr 19";
+		String d = "MAr 15 - Mar 19";
+		
+		System.out.println(a.contains(split[1]));
+		System.out.println(b.contains(split[1]));
+		System.out.println(d.contains(split[1]));
+		
+	
+		
+			
 	}
 }

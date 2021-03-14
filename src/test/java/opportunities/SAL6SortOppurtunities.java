@@ -68,5 +68,6 @@ public class SAL6SortOppurtunities extends ProjectSpecificMethods{
 	
 	as.assertTrue(closeDate.equals(sortedDate));
 	as.assertAll();
+	
 	}
 }

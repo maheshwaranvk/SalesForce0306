@@ -41,7 +41,8 @@ public class Assessment0314 extends ProjectSpecificMethods{
 	driver.switchTo().frame(driver.findElementByXPath("//iframe[@title='dashboard']"));
 	waitForIt("//h2[text()='New Dashboard']");
 	
-	String dashboardName ="Test_Workout";
+	String dashboardName ="Test1_Workout";
+		
 	driver.findElementByXPath("//input[@id='dashboardNameInput']").sendKeys(dashboardName);
 	driver.findElementById("dashboardDescriptionInput").sendKeys("Testing");
 	driver.findElementById("submitBtn").click();
@@ -51,7 +52,11 @@ public class Assessment0314 extends ProjectSpecificMethods{
 	driver.findElementByXPath("//button[@class='slds-button doneEditing']").click();
 	
 	as.assertTrue(driver.findElementByXPath("//span[@class='slds-page-header__title slds-truncate'and text()='"+dashboardName+"']").isDisplayed());
+	driver.findElementByXPath("//button[text()='Subscribe']").click();
 	
+	
+	
+	as.assertAll();
 	
 	}
 }
