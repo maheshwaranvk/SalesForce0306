@@ -3,6 +3,7 @@ package assessment;
 import org.testng.annotations.Test;
 
 import base.ProjectSpecificMethods;
+import utils.RetryAnalyz;
 
 public class Assessment0314 extends ProjectSpecificMethods{
 
@@ -13,7 +14,7 @@ public class Assessment0314 extends ProjectSpecificMethods{
 	
 	javaScriptClick(driver.findElementByXPath("//p[text()='Service Console']"));
 	
-	Thread.sleep(2000);
+	Thread.sleep(5000);
 	//javaScriptClick(driver.findElementByXPath("//div[@class='slds-context-bar__icon-action']"));
 	driver.findElementByXPath("//button[@title='Show Navigation Menu']//*[@data-key='chevrondown']").click();
 	javaScriptClick(driver.findElementByXPath("//span[@class='slds-media__body']//span[text()='Home']"));
@@ -37,9 +38,10 @@ public class Assessment0314 extends ProjectSpecificMethods{
 	javaScriptClick(driver.findElementByXPath("//button[@title='Show Navigation Menu']"));
 	javaScriptClick(driver.findElementByXPath("//span[@class='slds-media__body']//span[text()='Dashboards']"));
 	javaScriptClick(driver.findElementByXPath("//div[@title='New Dashboard']"));
-	
 	driver.switchTo().frame(driver.findElementByXPath("//iframe[@title='dashboard']"));
-	waitForIt("//h2[text()='New Dashboard']");
+	waitForIt("//div[@class='slds-modal__container createModal']//h2[text()='New Dashboard']");
+	
+	
 	
 	String dashboardName ="Test1_Workout";
 		
@@ -54,6 +56,17 @@ public class Assessment0314 extends ProjectSpecificMethods{
 	as.assertTrue(driver.findElementByXPath("//span[@class='slds-page-header__title slds-truncate'and text()='"+dashboardName+"']").isDisplayed());
 	driver.findElementByXPath("//button[text()='Subscribe']").click();
 	
+	driver.switchTo().parentFrame();
+	Thread.sleep(4000);
+	driver.findElementByXPath("//span[text()='Daily']").click();
+
+	dropdown(driver.findElementById("time"), "visibletext", "10:00 AM");
+	driver.findElementByXPath("//div[@class='modal-container slds-modal__container']//span[text()='Save']").click();
+	
+	waitForIt("//span[@data-aura-class='forceActionsText' and text()='You started a dashboard subscription.']");
+	as.assertTrue(driver.findElementByXPath("//span[@data-aura-class='forceActionsText' and text()='You started Dashboard Subscription.']").isDisplayed());
+	
+	driver.findElementByXPath("//button[@class='slds-button slds-button_icon slds-button_icon-x-small slds-button_icon-container' and @title='Close "+dashboardName+"']");
 	
 	
 	as.assertAll();

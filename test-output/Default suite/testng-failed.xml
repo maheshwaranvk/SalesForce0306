@@ -3,14 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="automation.SAL56BoardExamSchedule">
+      <class name="serviceResources.SAL112CreateServiceResources">
         <methods>
           <include name="browserName"/>
-          <include name="boardExamSchedule"/>
-          <include name="loadurl"/>
+          <include name="createResources"/>
           <include name="openBrowser"/>
         </methods>
-      </class> <!-- automation.SAL56BoardExamSchedule -->
+      </class> <!-- serviceResources.SAL112CreateServiceResources -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -2,28 +2,37 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="37270" started-at="2021-03-14T19:52:23 IST" finished-at="2021-03-14T19:53:00 IST">
+  <suite name="Suite" duration-ms="28890" started-at="2021-03-20T12:53:30 IST" finished-at="2021-03-20T12:53:58 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="37270" started-at="2021-03-14T19:52:23 IST" finished-at="2021-03-14T19:53:00 IST">
-      <class name="automation.SAL56BoardExamSchedule">
-        <test-method status="PASS" signature="browserName()[pri:0, instance:automation.SAL56BoardExamSchedule@757942a1]" name="browserName" is-config="true" duration-ms="9" started-at="2021-03-14T19:52:23 IST" finished-at="2021-03-14T19:52:23 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserName -->
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:automation.SAL56BoardExamSchedule@757942a1]" name="openBrowser" is-config="true" duration-ms="2263" started-at="2021-03-14T19:52:23 IST" finished-at="2021-03-14T19:52:25 IST">
+    <test name="Test" duration-ms="28890" started-at="2021-03-20T12:53:30 IST" finished-at="2021-03-20T12:53:58 IST">
+      <class name="automation.SAL59DwldPDF">
+        <test-method status="PASS" signature="openBrowser(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:automation.SAL59DwldPDF@42eca56e]" name="openBrowser" is-config="true" duration-ms="7607" started-at="2021-03-20T12:53:30 IST" finished-at="2021-03-20T12:53:37 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[mercury.bootcamp@testleaf.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Bootcamp$123]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="loadurl()[pri:0, instance:automation.SAL56BoardExamSchedule@757942a1]" name="loadurl" is-config="true" duration-ms="4953" started-at="2021-03-14T19:52:25 IST" finished-at="2021-03-14T19:52:30 IST">
+        <test-method status="PASS" signature="downloadPDF()[pri:0, instance:automation.SAL59DwldPDF@42eca56e]" name="downloadPDF" duration-ms="21244" started-at="2021-03-20T12:53:37 IST" finished-at="2021-03-20T12:53:58 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loadurl -->
-        <test-method status="PASS" signature="boardExamSchedule()[pri:0, instance:automation.SAL56BoardExamSchedule@757942a1]" name="boardExamSchedule" duration-ms="30033" started-at="2021-03-14T19:52:30 IST" finished-at="2021-03-14T19:53:00 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- boardExamSchedule -->
-      </class> <!-- automation.SAL56BoardExamSchedule -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- downloadPDF -->
+      </class> <!-- automation.SAL59DwldPDF -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

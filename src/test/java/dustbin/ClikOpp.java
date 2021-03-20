@@ -1,4 +1,4 @@
-package opportunities;
+package dustbin;
 
 import org.testng.annotations.Test;
 

@@ -33,28 +33,25 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.asserts.SoftAssert;
+
+import com.beust.jcommander.Parameter;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class ProjectSpecificMethods {
+public class ProjectSpecificMethods2 {
 	public static RemoteWebDriver driver;
 	public String browser;
 	public static JavascriptExecutor js;
 	public static SoftAssert as;
 	public static WebDriverWait wait;
 	
-	
-@BeforeSuite
-	public void browserName() {
-	browser="chrome";
-	as = new SoftAssert();
-	}
-
+@Parameters({"browser","uName","passW"})
 @BeforeMethod
-public void openBrowser() {
-		
-		if(browser.equalsIgnoreCase("chrome")) {
+public void openBrowser(String bName, String userName, String passWord) {
+	as = new SoftAssert();
+		if(bName.equalsIgnoreCase("chrome")) {
 		WebDriverManager.chromedriver().setup();
 		
 		ChromeOptions options = new ChromeOptions();
@@ -62,7 +59,7 @@ public void openBrowser() {
 		driver = new ChromeDriver(options);	
 		}
 		
-		else if(browser.equalsIgnoreCase("firefox")) {
+		else if(bName.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			
 			FirefoxOptions options = new FirefoxOptions();
@@ -75,8 +72,8 @@ public void openBrowser() {
 		 driver.manage().deleteAllCookies();
 		 driver.get("https://login.salesforce.com");
 			driver.manage().window().maximize();
-			driver.findElementById("username").sendKeys("mercury.bootcamp@testleaf.com");
-			driver.findElementById("password").sendKeys("Bootcamp$123");
+			driver.findElementById("username").sendKeys(userName);
+			driver.findElementById("password").sendKeys(passWord);
 			driver.findElementById("Login").click();
 	}
 
