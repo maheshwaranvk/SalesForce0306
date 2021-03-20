@@ -1,38 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="28890" started-at="2021-03-20T12:53:30 IST" finished-at="2021-03-20T12:53:58 IST">
+  <suite name="Suite" duration-ms="70642" started-at="2021-03-20T21:00:02 IST" finished-at="2021-03-20T21:01:12 IST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="28890" started-at="2021-03-20T12:53:30 IST" finished-at="2021-03-20T12:53:58 IST">
-      <class name="automation.SAL59DwldPDF">
-        <test-method status="PASS" signature="openBrowser(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:automation.SAL59DwldPDF@42eca56e]" name="openBrowser" is-config="true" duration-ms="7607" started-at="2021-03-20T12:53:30 IST" finished-at="2021-03-20T12:53:37 IST">
+    <test name="Test" duration-ms="70642" started-at="2021-03-20T21:00:02 IST" finished-at="2021-03-20T21:01:12 IST">
+      <class name="opportunities.SAL2CreateOppurtunities">
+        <test-method status="PASS" signature="browserName()[pri:0, instance:opportunities.SAL2CreateOppurtunities@4e718207]" name="browserName" is-config="true" duration-ms="16" started-at="2021-03-20T21:00:02 IST" finished-at="2021-03-20T21:00:02 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserName -->
+        <test-method status="PASS" signature="readExcelName(java.lang.String)[pri:0, instance:opportunities.SAL2CreateOppurtunities@4e718207]" name="readExcelName" is-config="true" duration-ms="0" started-at="2021-03-20T21:00:02 IST" depends-on-methods="base.ProjectSpecificMethods.browserName" finished-at="2021-03-20T21:00:02 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[mercury.bootcamp@testleaf.com]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Bootcamp$123]]>
+                <![CDATA[CreateOpp]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="downloadPDF()[pri:0, instance:automation.SAL59DwldPDF@42eca56e]" name="downloadPDF" duration-ms="21244" started-at="2021-03-20T12:53:37 IST" finished-at="2021-03-20T12:53:58 IST">
+        </test-method> <!-- readExcelName -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:opportunities.SAL2CreateOppurtunities@4e718207]" name="openBrowser" is-config="true" duration-ms="10053" started-at="2021-03-20T21:00:02 IST" finished-at="2021-03-20T21:00:12 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- downloadPDF -->
-      </class> <!-- automation.SAL59DwldPDF -->
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="createOppurtunities(java.lang.String)[pri:0, instance:opportunities.SAL2CreateOppurtunities@4e718207]" name="createOppurtunities" duration-ms="8670" started-at="2021-03-20T21:00:12 IST" data-provider="fetchData" finished-at="2021-03-20T21:00:21 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Sales Automation by Naveen]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createOppurtunities -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:opportunities.SAL2CreateOppurtunities@4e718207]" name="openBrowser" is-config="true" duration-ms="3530" started-at="2021-03-20T21:00:21 IST" finished-at="2021-03-20T21:00:24 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="createOppurtunities(java.lang.String)[pri:0, instance:opportunities.SAL2CreateOppurtunities@4e718207]" name="createOppurtunities" duration-ms="13312" started-at="2021-03-20T21:00:24 IST" data-provider="fetchData" finished-at="2021-03-20T21:00:38 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Sales Automation by Rani]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createOppurtunities -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:opportunities.SAL2CreateOppurtunities@4e718207]" name="openBrowser" is-config="true" duration-ms="6037" started-at="2021-03-20T21:00:38 IST" finished-at="2021-03-20T21:00:44 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="createOppurtunities(java.lang.String)[pri:0, instance:opportunities.SAL2CreateOppurtunities@4e718207]" name="createOppurtunities" duration-ms="11435" started-at="2021-03-20T21:00:44 IST" data-provider="fetchData" finished-at="2021-03-20T21:00:55 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Sales Automation by Praba]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createOppurtunities -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:opportunities.SAL2CreateOppurtunities@4e718207]" name="openBrowser" is-config="true" duration-ms="5975" started-at="2021-03-20T21:00:55 IST" finished-at="2021-03-20T21:01:01 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="createOppurtunities(java.lang.String)[pri:0, instance:opportunities.SAL2CreateOppurtunities@4e718207]" name="createOppurtunities" duration-ms="11119" started-at="2021-03-20T21:01:01 IST" data-provider="fetchData" finished-at="2021-03-20T21:01:12 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Sales Automation by Raj]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createOppurtunities -->
+      </class> <!-- opportunities.SAL2CreateOppurtunities -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

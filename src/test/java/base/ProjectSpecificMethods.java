@@ -33,16 +33,20 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
 import org.testng.asserts.SoftAssert;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import utils.ReadExcelData;
 
-public class ProjectSpecificMethods {
+public class ProjectSpecificMethods extends ReadExcelData{
 	public static RemoteWebDriver driver;
 	public String browser;
 	public static JavascriptExecutor js;
 	public static SoftAssert as;
 	public static WebDriverWait wait;
+	public static String excelFileName;
 	
 	
 @BeforeSuite
@@ -204,6 +208,11 @@ public static void dropdown(WebElement we, String searchby, String value) {
 }
 
 
+@DataProvider(name="fetchData")
+public String[][] readDataFromExcel() throws IOException {
+	return readExcelSheet(excelFileName);
+
+}
 
 
 }

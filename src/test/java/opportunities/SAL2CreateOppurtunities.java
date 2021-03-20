@@ -1,39 +1,47 @@
 package opportunities;
 
 
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import base.ProjectSpecificMethods;
 
 public class SAL2CreateOppurtunities extends ProjectSpecificMethods {
+	
+	@BeforeSuite
+	@Parameters({"excelFileName"})
+	public void readExcelName(String excelName) {
+		excelFileName=excelName;
+	}
 
-	@Test
-	public void createOppurtunities() {
+	@Test(dataProvider="fetchData")
+	public void createOppurtunities(String opName) {
 		driver.findElementByXPath("//div[@class='slds-icon-waffle']").click();
 		driver.findElementByXPath("//button[text()='View All']").click();
 		js.executeScript("arguments[0].click()", driver.findElementByXPath("//p[text()='Opportunities']"));
 		
 		driver.findElementByXPath("//div[@title='New']").click();
 		
-		String opName ="Salesforce Automation by Sara";
+		//String opName ="Salesforce Automation by Sara";
 		
-		driver.findElementByXPath("//span[@class='' and text()='Opportunity Name']/following::input[@class=' input' and @type='text' and @aria-required='true']").sendKeys(opName);
+		waitForIt("//h2[text()='New Opportunity']");
+		driver.findElementByXPath("//input[@name='Name']").sendKeys(opName);
 		
-		driver.findElementByXPath("//div[@class='form-element']//input").click();
-		driver.findElementByXPath("//button[@class='today slds-button slds-align_absolute-center slds-text-link']").click();
+		driver.findElementByXPath("//label[text()='Close Date']/following::input[@type='text' and @name='CloseDate']").click();
 		
-		driver.findElementByXPath("//span[@class='label inputLabel uiPicklistLabel-left form-element__label uiPicklistLabel']//span[text()='Stage']/following::a[@aria-required='true']").click();
-		driver.findElementByXPath("//a[@title='Needs Analysis']").click();
-		driver.findElementByXPath("//button[@class='slds-button slds-button--neutral uiButton--brand uiButton forceActionButton']").click();
+		javaScriptClick(driver.findElementByXPath("//button[text()='Today']"));
+		
+		javaScriptClick(driver.findElementByXPath("//label[text()='Stage']/following::input[@role='combobox' and @required='']"));
+		driver.findElementByXPath("//span[@title='Needs Analysis']").click();
+		driver.findElementByXPath("//button[text()='Save']").click();
 		
 		String text = driver.findElementByXPath("//slot[@slot='primaryField']//lightning-formatted-text").getText();
 		
-		if(text.equalsIgnoreCase(opName)) {
-		System.out.println("Oppurtunity Created");
+		as.assertTrue(text.equalsIgnoreCase(opName));
+		as.assertAll();
+		
 	}
-		else {
-			System.out.println("Oppurtunity not Created");}
-		}
-	}
-
+	
+}
 
