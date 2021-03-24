@@ -7,14 +7,14 @@ import base.ProjectSpecificMethods;
 
 public class SAL4DeleteOppurtunity extends ProjectSpecificMethods{
 
-	@Test
+	@Test()
 	public void deleteOppurtunity() throws InterruptedException {
 		clickMenu();
 		
 		js.executeScript("arguments[0].click()", driver.findElementByXPath("//p[text()='Opportunities']"));
 		
 		
-		js.executeScript("arguments[0].value='Saleforce Automation by Sara'", driver.findElementByXPath("//input[@name='Opportunity-search-input']"));
+		js.executeScript("arguments[0].value='Saleforce Automation by Mahesh'", driver.findElementByXPath("//input[@name='Opportunity-search-input']"));
 		driver.findElementByXPath("//input[@name='Opportunity-search-input']").sendKeys(Keys.ENTER);
 		
 		Thread.sleep(2000);
@@ -25,7 +25,7 @@ public class SAL4DeleteOppurtunity extends ProjectSpecificMethods{
 		
 		Thread.sleep(3000);
 		
-		js.executeScript("arguments[0].value='Saleforce Automation by Sara'", driver.findElementByXPath("//input[@name='Opportunity-search-input']"));
+		js.executeScript("arguments[0].value='Saleforce Automation by Mahesh'", driver.findElementByXPath("//input[@name='Opportunity-search-input']"));
 		driver.findElementByXPath("//input[@name='Opportunity-search-input']").sendKeys(Keys.ENTER);
 		
 		as.assertTrue(driver.findElementByXPath("//p[text()='No items to display.']").isDisplayed());

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="3" name="Suite" parallel="classes">
+<parameter name="excelFileName" value="CreateOpp"></parameter>
+    <parameter name="browser" value="chrome"></parameter>
+	<parameter name="uName" value="mercury.bootcamp@testleaf.com"></parameter>
+	<parameter name="passW" value="Bootcamp$123"></parameter>
+  <test thread-count="3" name="Test" parallel="classes">
+    <classes>
+      <class name="opportunities.SAL2CreateOppurtunities"/>
+      <class name="testNG.CreateIndividual"/>
+    </classes>
+  </test>
+</suite>

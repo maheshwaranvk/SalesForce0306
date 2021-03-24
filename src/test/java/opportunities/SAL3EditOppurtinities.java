@@ -4,8 +4,10 @@ import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 
 import base.ProjectSpecificMethods;
+import base.ProjectSpecificMethods2;
+import base.ProjectSpecificMethods3;
 
-public class SAL3EditOppurtinities extends ProjectSpecificMethods{
+public class SAL3EditOppurtinities extends ProjectSpecificMethods3{
 
 	@Test
 	public void editOppurtunities() throws InterruptedException {
@@ -22,17 +24,20 @@ public class SAL3EditOppurtinities extends ProjectSpecificMethods{
 		js.executeScript("arguments[0].click()", driver.findElementByXPath("(//table[@data-aura-class='uiVirtualDataTable']//*[@data-key='down']/..)[1]"));
 		js.executeScript("arguments[0].click()", driver.findElementByXPath("//a[@role='menuitem' and @title='Edit']"));
 		
-		driver.findElementByXPath("//div[@class='form-element']//input").click();
-		driver.findElementByXPath("(//span[@class='slds-day weekend todayDate selectedDate DESKTOP uiDayInMonthCell--default']/following::span)[1]").click();
+		driver.findElementByXPath("//input[@name='CloseDate']").click();
+		javaScriptClick(driver.findElementByXPath("//button[text()='Today']"));
 		
-		driver.findElementByXPath("//span[@class='label inputLabel uiPicklistLabel-left form-element__label uiPicklistLabel']//span[text()='Stage']/following::a[@aria-required='true']").click();
-		driver.findElementByXPath("//a[@title='Perception Analysis']").click();
+		driver.findElementByXPath("//label[text()='Stage']/following::input[@required='']").click();
+		driver.findElementByXPath("//span[@title='Perception Analysis']").click();
 		
-		driver.findElementByXPath("//span[text()='Delivery/Installation Status']/following::a[@class='select']").click();
-		driver.findElementByXPath("//li/a[@title='In progress']").click();
+		
+		driver.findElementByXPath("//label[text()='Delivery/Installation Status']/following::input[@role='combobox']").click();
+		driver.findElementByXPath("//span[@title='In progress']").click();
+		
+		
 		driver.findElementByXPath("//label[@data-aura-class='uiLabel']/following::textarea").sendKeys("SalesForce");
 		
-		driver.findElementByXPath("//button[@class='slds-button slds-button--neutral uiButton--brand uiButton forceActionButton']").click();
+		driver.findElementByXPath("//button[text()='Save']").click();
 		Thread.sleep(2000);
 		String text = driver.findElementByXPath("(//table[@data-aura-class='uiVirtualDataTable']//td[@class='slds-cell-edit cellContainer']//span[@class='slds-truncate'])[1]").getText();
 		

@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" verbose="5" name="Failed suite [Suite]">
+  <parameter name="browser" value="chrome"/>
+  <test thread-count="5" verbose="5" name="Test(failed)">
+    <groups>
+      <run>
+        <include name="oppurtunity"/>
+      </run>
+    </groups>
     <classes>
-      <class name="opportunities.SAL2CreateOppurtunities">
+      <class name="testNGAttributes.CreateOpp">
         <methods>
           <include name="createOppurtunities"/>
-          <include name="browserName"/>
-          <include name="readExcelName"/>
-          <include name="openBrowser"/>
         </methods>
-      </class> <!-- opportunities.SAL2CreateOppurtunities -->
+      </class> <!-- testNGAttributes.CreateOpp -->
+      <class name="testNGAttributes.DeleteOpp">
+        <methods>
+          <include name="deleteOppurtunity"/>
+        </methods>
+      </class> <!-- testNGAttributes.DeleteOpp -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

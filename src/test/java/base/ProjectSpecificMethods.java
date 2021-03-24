@@ -151,7 +151,7 @@ public static void datePicker(String date) {
 }
 
 public static void checkDisplay(String linkName) {
-	as.assertTrue(driver.findElementByXPath("//div[@class='cs-card tile']//a[text()='"+linkName+"']").isDisplayed());
+	as.assertTrue(driver.findElementByXPath("//div[@class='leftnav hidden-xs hidden-sm padding-top-no-affix affix-top']//a[text()='"+linkName+"']").isDisplayed());
 }
 
 public void waitForIt(String we) {
@@ -208,7 +208,7 @@ public static void dropdown(WebElement we, String searchby, String value) {
 }
 
 
-@DataProvider(name="fetchData")
+
 public String[][] readDataFromExcel() throws IOException {
 	return readExcelSheet(excelFileName);
 

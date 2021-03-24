@@ -1,88 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="2" ignored="0" total="2" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="70642" started-at="2021-03-20T21:00:02 IST" finished-at="2021-03-20T21:01:12 IST">
+  <suite name="Suite" duration-ms="46" started-at="2021-03-24T10:24:55 IST" finished-at="2021-03-24T10:24:55 IST">
     <groups>
+      <group name="oppurtunity">
+        <method signature="CreateOpp.createOppurtunities()[pri:0, instance:testNGAttributes.CreateOpp@4e718207]" name="createOppurtunities" class="testNGAttributes.CreateOpp"/>
+        <method signature="DeleteOpp.deleteOppurtunity()[pri:0, instance:testNGAttributes.DeleteOpp@1d371b2d]" name="deleteOppurtunity" class="testNGAttributes.DeleteOpp"/>
+      </group> <!-- oppurtunity -->
     </groups>
-    <test name="Test" duration-ms="70642" started-at="2021-03-20T21:00:02 IST" finished-at="2021-03-20T21:01:12 IST">
-      <class name="opportunities.SAL2CreateOppurtunities">
-        <test-method status="PASS" signature="browserName()[pri:0, instance:opportunities.SAL2CreateOppurtunities@4e718207]" name="browserName" is-config="true" duration-ms="16" started-at="2021-03-20T21:00:02 IST" finished-at="2021-03-20T21:00:02 IST">
+    <test name="Test" duration-ms="46" started-at="2021-03-24T10:24:55 IST" finished-at="2021-03-24T10:24:55 IST">
+      <class name="testNGAttributes.DeleteOpp">
+        <test-method status="FAIL" signature="deleteOppurtunity()[pri:0, instance:testNGAttributes.DeleteOpp@1d371b2d]" name="deleteOppurtunity" duration-ms="1" started-at="2021-03-24T10:24:55 IST" finished-at="2021-03-24T10:24:55 IST">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at testNGAttributes.BaseClass.clickMenu(BaseClass.java:87)
+at testNGAttributes.DeleteOpp.deleteOppurtunity(DeleteOpp.java:10)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- browserName -->
-        <test-method status="PASS" signature="readExcelName(java.lang.String)[pri:0, instance:opportunities.SAL2CreateOppurtunities@4e718207]" name="readExcelName" is-config="true" duration-ms="0" started-at="2021-03-20T21:00:02 IST" depends-on-methods="base.ProjectSpecificMethods.browserName" finished-at="2021-03-20T21:00:02 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[CreateOpp]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- readExcelName -->
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:opportunities.SAL2CreateOppurtunities@4e718207]" name="openBrowser" is-config="true" duration-ms="10053" started-at="2021-03-20T21:00:02 IST" finished-at="2021-03-20T21:00:12 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="createOppurtunities(java.lang.String)[pri:0, instance:opportunities.SAL2CreateOppurtunities@4e718207]" name="createOppurtunities" duration-ms="8670" started-at="2021-03-20T21:00:12 IST" data-provider="fetchData" finished-at="2021-03-20T21:00:21 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Sales Automation by Naveen]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- deleteOppurtunity -->
+      </class> <!-- testNGAttributes.DeleteOpp -->
+      <class name="testNGAttributes.CreateOpp">
+        <test-method status="FAIL" signature="createOppurtunities()[pri:0, instance:testNGAttributes.CreateOpp@4e718207]" name="createOppurtunities" duration-ms="7" started-at="2021-03-24T10:24:55 IST" finished-at="2021-03-24T10:24:55 IST">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at testNGAttributes.CreateOpp.createOppurtunities(CreateOpp.java:8)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createOppurtunities -->
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:opportunities.SAL2CreateOppurtunities@4e718207]" name="openBrowser" is-config="true" duration-ms="3530" started-at="2021-03-20T21:00:21 IST" finished-at="2021-03-20T21:00:24 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="createOppurtunities(java.lang.String)[pri:0, instance:opportunities.SAL2CreateOppurtunities@4e718207]" name="createOppurtunities" duration-ms="13312" started-at="2021-03-20T21:00:24 IST" data-provider="fetchData" finished-at="2021-03-20T21:00:38 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Sales Automation by Rani]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createOppurtunities -->
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:opportunities.SAL2CreateOppurtunities@4e718207]" name="openBrowser" is-config="true" duration-ms="6037" started-at="2021-03-20T21:00:38 IST" finished-at="2021-03-20T21:00:44 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="createOppurtunities(java.lang.String)[pri:0, instance:opportunities.SAL2CreateOppurtunities@4e718207]" name="createOppurtunities" duration-ms="11435" started-at="2021-03-20T21:00:44 IST" data-provider="fetchData" finished-at="2021-03-20T21:00:55 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Sales Automation by Praba]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createOppurtunities -->
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:opportunities.SAL2CreateOppurtunities@4e718207]" name="openBrowser" is-config="true" duration-ms="5975" started-at="2021-03-20T21:00:55 IST" finished-at="2021-03-20T21:01:01 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="createOppurtunities(java.lang.String)[pri:0, instance:opportunities.SAL2CreateOppurtunities@4e718207]" name="createOppurtunities" duration-ms="11119" started-at="2021-03-20T21:01:01 IST" data-provider="fetchData" finished-at="2021-03-20T21:01:12 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Sales Automation by Raj]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createOppurtunities -->
-      </class> <!-- opportunities.SAL2CreateOppurtunities -->
+      </class> <!-- testNGAttributes.CreateOpp -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

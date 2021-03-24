@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-<parameter name="browser" value="chrome"></parameter>
-<parameter name="uName" value="mercury.bootcamp@testleaf.com"></parameter>
-<parameter name="passW" value="Bootcamp$123"></parameter>
-  <test thread-count="5" name="Test">
-    <classes>
-      <class name="automation.SAL59DwldPDF"/>
-    </classes>
-  </test> <!-- Test -->
+<suite name="Suite" verbose="5">
+	<parameter name="browser" value="chrome"></parameter>
+
+	<test thread-count="5" name="Test">
+		<groups>
+			<run>
+				<include name="oppurtunity"></include>
+			</run>
+		</groups>
+		<classes>
+			<class name="testNGAttributes.CreateOpp" />
+		<!-- 	<class name="testNGAttributes.AdminCertificate" /> -->
+			<class name="testNGAttributes.DeleteOpp" />
+		<!-- 	<class name="testNGAttributes.ArchiteCerti" />
+			<class name="testNGAttributes.CustomerServiceOptionsClass" />
+			<class name="testNGAttributes.EditOpp" /> -->
+		</classes>
+	</test> <!-- Test -->
 </suite> <!-- Suite -->

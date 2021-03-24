@@ -6,13 +6,13 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import base.ProjectSpecificMethods;
+import base.ProjectSpecificMethods3;
 
-public class SAL2CreateOppurtunities extends ProjectSpecificMethods {
+public class SAL2CreateOppurtunities extends ProjectSpecificMethods3 {
 	
 	@BeforeSuite
-	@Parameters({"excelFileName"})
-	public void readExcelName(String excelName) {
-		excelFileName=excelName;
+	public void readExcelName() {
+		excelFileName="CreateIndi";
 	}
 
 	@Test(dataProvider="fetchData")

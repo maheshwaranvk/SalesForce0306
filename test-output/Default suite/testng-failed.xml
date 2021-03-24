@@ -3,14 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="opportunities.SAL2CreateOppurtunities">
+      <class name="testNG.CreateOpp">
         <methods>
-          <include name="createOppurtunities"/>
-          <include name="browserName"/>
-          <include name="readExcelName"/>
           <include name="openBrowser"/>
+          <include name="createOppurtunities"/>
+          <include name="readExcelName"/>
         </methods>
-      </class> <!-- opportunities.SAL2CreateOppurtunities -->
+      </class> <!-- testNG.CreateOpp -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
