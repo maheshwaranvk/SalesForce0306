@@ -52,7 +52,7 @@ public class BaseClass extends ReadExcelData{
 	
 
 @Parameters({"browser"})
-@BeforeMethod(groups = {"oppurtunity"})
+@BeforeMethod(groups = {"oppurtunity","automation"})
 public void openBrowser(String browser) {
 		
 		if(browser.equalsIgnoreCase("chrome")) {

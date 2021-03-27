@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 public class DeleteOpp extends BaseClass {
 
-	@Test(groups = {"oppurtunity"})
+	@Test(groups = {"oppurtunity"},dependsOnMethods = "testNGAttributes.CreateOpp.createOppurtunities")
 	public void deleteOppurtunity() throws InterruptedException {
 		clickMenu();
 		
