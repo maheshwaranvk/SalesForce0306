@@ -42,7 +42,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import utils.ReadExcelData;
 
 public class BaseClass extends ReadExcelData{
-	public static RemoteWebDriver driver;
+	public RemoteWebDriver driver;
 	//public String browser="chrome";
 	public static JavascriptExecutor js;
 	public static SoftAssert as;
@@ -52,7 +52,7 @@ public class BaseClass extends ReadExcelData{
 	
 
 @Parameters({"browser"})
-@BeforeMethod
+@BeforeMethod(groups = {"oppurtunity"})
 public void openBrowser(String browser) {
 		
 		if(browser.equalsIgnoreCase("chrome")) {

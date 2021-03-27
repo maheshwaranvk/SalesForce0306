@@ -9,13 +9,9 @@
       </run>
     </groups>
     <classes>
-      <class name="testNGAttributes.CreateOpp">
-        <methods>
-          <include name="createOppurtunities"/>
-        </methods>
-      </class> <!-- testNGAttributes.CreateOpp -->
       <class name="testNGAttributes.DeleteOpp">
         <methods>
+          <include name="openBrowser"/>
           <include name="deleteOppurtunity"/>
         </methods>
       </class> <!-- testNGAttributes.DeleteOpp -->

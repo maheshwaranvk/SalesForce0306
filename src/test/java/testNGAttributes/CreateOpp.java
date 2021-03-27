@@ -3,7 +3,7 @@ package testNGAttributes;
 import org.testng.annotations.Test;
 
 public class CreateOpp extends BaseClass{
-	@Test(groups = {"oppurtunity"})
+	@Test(groups = {"oppurtunity"},invocationCount = 2,threadPoolSize = 2)
 	public void createOppurtunities() {
 		driver.findElementByXPath("//div[@class='slds-icon-waffle']").click();
 		driver.findElementByXPath("//button[text()='View All']").click();
