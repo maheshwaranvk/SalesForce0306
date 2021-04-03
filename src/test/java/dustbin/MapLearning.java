@@ -23,7 +23,7 @@ public class MapLearning {
 		
 	String str = "MaHesH";
 	
-	System.out.println(str.toLowerCase());
+	System.out.println(str.toLowerCase()); 
 		
 			
 	}

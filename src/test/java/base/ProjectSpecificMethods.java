@@ -70,7 +70,7 @@ public void openBrowser() {
 			WebDriverManager.firefoxdriver().setup();
 			
 			FirefoxOptions options = new FirefoxOptions();
-			options.addArguments("--disable-notifications");
+			options.addArguments("--disable-notifications"); 
 			driver = new FirefoxDriver(options);
 		}
 		
@@ -95,7 +95,7 @@ public static void clickMenu() {
 
 }
 
-public static void datePicker(String date) {
+public static void datePicker(String date,String we) {
 
 	Map<String,Integer> months = new HashMap<String,Integer>();
 	months.put("JANUARY", 1);
@@ -113,15 +113,22 @@ public static void datePicker(String date) {
 	
 	Set<Entry<String, Integer>> entrySet = months.entrySet();
 
-	driver.findElementByXPath("//a[@class='datePicker-openIcon display']").click();
+	driver.findElementByXPath(we).click();
+
 	driver.findElementByXPath("//button[text()='Today']").click();
-	String attribute = driver.findElementByXPath("//a[@class='datePicker-openIcon display']/preceding-sibling::input").getAttribute("value");
+	String attribute;
+	try {
+		attribute = driver.findElementByXPath(""+we+"/preceding-sibling::input").getAttribute("value");
+	} catch (Exception e) {
+		attribute = driver.findElementByXPath(we).getAttribute("value");
+	}
 	String[] today = attribute.split("/");
 	String[] givenDate = date.split("/");
 	
 	int month = Integer.parseInt(today[0]);
 	int givenDateMonth = Integer.parseInt(givenDate[0]);
-	driver.findElementByXPath("//a[@class='datePicker-openIcon display']").click();
+	driver.findElementByXPath(we).click();
+
 	//SetMonth
 	if(givenDateMonth> month)
 		
@@ -157,7 +164,7 @@ public static void checkDisplay(String linkName) {
 public void waitForIt(String we) {
 	
 	wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(we)));
+	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(we))); 
 
 }
 
@@ -213,6 +220,7 @@ public String[][] readDataFromExcel() throws IOException {
 	return readExcelSheet(excelFileName);
 
 }
+
 
 
 }

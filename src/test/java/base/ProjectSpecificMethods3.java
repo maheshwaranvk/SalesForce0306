@@ -114,15 +114,15 @@ public void datePicker(String date) {
 	
 	Set<Entry<String, Integer>> entrySet = months.entrySet();
 
-	driver.findElementByXPath("//a[@class='datePicker-openIcon display']").click();
+	driver.findElementByXPath("//input[@name='CloseDate']").click();
 	driver.findElementByXPath("//button[text()='Today']").click();
-	String attribute = driver.findElementByXPath("//a[@class='datePicker-openIcon display']/preceding-sibling::input").getAttribute("value");
+	String attribute = driver.findElementByXPath("//input[@name='CloseDate']").getAttribute("value");
 	String[] today = attribute.split("/");
 	String[] givenDate = date.split("/");
 	
 	int month = Integer.parseInt(today[0]);
 	int givenDateMonth = Integer.parseInt(givenDate[0]);
-	driver.findElementByXPath("//a[@class='datePicker-openIcon display']").click();
+	driver.findElementByXPath("//input[@name='CloseDate']").click();
 	//SetMonth
 	if(givenDateMonth> month)
 		
@@ -215,9 +215,4 @@ public String[][] readDataFromExcel() throws IOException {
 
 }
 
-@AfterMethod
-public void closeDriver() {
-	driver.quit();
-
-}
 }

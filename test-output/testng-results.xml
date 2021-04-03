@@ -1,106 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="3" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="57762" started-at="2021-03-25T22:02:13 IST" finished-at="2021-03-25T22:03:11 IST">
+  <suite name="Default suite" duration-ms="21533" started-at="2021-04-03T15:46:44 IST" finished-at="2021-04-03T15:47:06 IST">
     <groups>
-      <group name="oppurtunity">
-        <method signature="CreateOpp.createOppurtunities()[pri:0, instance:testNGAttributes.CreateOpp@51c8530f]" name="createOppurtunities" class="testNGAttributes.CreateOpp"/>
-        <method signature="DeleteOpp.deleteOppurtunity()[pri:0, instance:testNGAttributes.DeleteOpp@7403c468]" name="deleteOppurtunity" class="testNGAttributes.DeleteOpp"/>
-      </group> <!-- oppurtunity -->
     </groups>
-    <test name="Test" duration-ms="57762" started-at="2021-03-25T22:02:13 IST" finished-at="2021-03-25T22:03:11 IST">
-      <class name="testNGAttributes.DeleteOpp">
-        <test-method status="PASS" signature="openBrowser(java.lang.String)[pri:0, instance:testNGAttributes.DeleteOpp@7403c468]" name="openBrowser" is-config="true" duration-ms="6382" started-at="2021-03-25T22:02:51 IST" finished-at="2021-03-25T22:02:58 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
+    <test name="Default test" duration-ms="21533" started-at="2021-04-03T15:46:44 IST" finished-at="2021-04-03T15:47:06 IST">
+      <class name="sal18_dashboard.SAL19CreateDashboard">
+        <test-method status="PASS" signature="browserName()[pri:0, instance:sal18_dashboard.SAL19CreateDashboard@192d3247]" name="browserName" is-config="true" duration-ms="9" started-at="2021-04-03T15:46:44 IST" finished-at="2021-04-03T15:46:44 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserName -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:sal18_dashboard.SAL19CreateDashboard@192d3247]" name="openBrowser" is-config="true" duration-ms="6699" started-at="2021-04-03T15:46:44 IST" finished-at="2021-04-03T15:46:51 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="FAIL" signature="deleteOppurtunity()[pri:0, instance:testNGAttributes.DeleteOpp@7403c468]" name="deleteOppurtunity" duration-ms="12999" started-at="2021-03-25T22:02:58 IST" finished-at="2021-03-25T22:03:11 IST">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[The following asserts failed:
-expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-expected [true] but found [false]
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
-at testNGAttributes.DeleteOpp.deleteOppurtunity(DeleteOpp.java:30)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:764)
-at org.testng.TestRunner.run(TestRunner.java:585)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-at org.testng.TestNG.runSuites(TestNG.java:1069)
-at org.testng.TestNG.run(TestNG.java:1037)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method status="PASS" signature="createDashB()[pri:0, instance:sal18_dashboard.SAL19CreateDashboard@192d3247]" name="createDashB" duration-ms="14806" started-at="2021-04-03T15:46:51 IST" finished-at="2021-04-03T15:47:06 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- deleteOppurtunity -->
-      </class> <!-- testNGAttributes.DeleteOpp -->
-      <class name="testNGAttributes.CreateOpp">
-        <test-method status="PASS" signature="openBrowser(java.lang.String)[pri:0, instance:testNGAttributes.CreateOpp@51c8530f]" name="openBrowser" is-config="true" duration-ms="7780" started-at="2021-03-25T22:02:13 IST" finished-at="2021-03-25T22:02:21 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="createOppurtunities()[pri:0, instance:testNGAttributes.CreateOpp@51c8530f]" name="createOppurtunities" duration-ms="12758" started-at="2021-03-25T22:02:21 IST" finished-at="2021-03-25T22:02:34 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createOppurtunities -->
-        <test-method status="PASS" signature="openBrowser(java.lang.String)[pri:0, instance:testNGAttributes.CreateOpp@51c8530f]" name="openBrowser" is-config="true" duration-ms="3564" started-at="2021-03-25T22:02:34 IST" finished-at="2021-03-25T22:02:37 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="createOppurtunities()[pri:0, instance:testNGAttributes.CreateOpp@51c8530f]" name="createOppurtunities" duration-ms="14241" started-at="2021-03-25T22:02:37 IST" finished-at="2021-03-25T22:02:51 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createOppurtunities -->
-      </class> <!-- testNGAttributes.CreateOpp -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- createDashB -->
+      </class> <!-- sal18_dashboard.SAL19CreateDashboard -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
