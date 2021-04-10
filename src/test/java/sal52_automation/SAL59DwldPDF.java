@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import base.ProjectSpecificMethods;
 import base.ProjectSpecificMethods2;
 
-public class SAL59DwldPDF extends ProjectSpecificMethods2 {
+public class SAL59DwldPDF extends ProjectSpecificMethods {
 
 	@Test
 	public void downloadPDF() throws IOException {

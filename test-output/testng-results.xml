@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14640" started-at="2021-04-04T10:35:14 IST" finished-at="2021-04-04T10:35:29 IST">
+  <suite name="Default suite" duration-ms="35687" started-at="2021-04-05T05:26:30 IST" finished-at="2021-04-05T05:27:06 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="14640" started-at="2021-04-04T10:35:14 IST" finished-at="2021-04-04T10:35:29 IST">
-      <class name="sal52_automation.SAL57VerifyiAppStore">
-        <test-method status="PASS" signature="browserName()[pri:0, instance:sal52_automation.SAL57VerifyiAppStore@192d3247]" name="browserName" is-config="true" duration-ms="16" started-at="2021-04-04T10:35:14 IST" finished-at="2021-04-04T10:35:14 IST">
+    <test name="Default test" duration-ms="35687" started-at="2021-04-05T05:26:30 IST" finished-at="2021-04-05T05:27:06 IST">
+      <class name="sal79_campaign.SAL81AttachDocument">
+        <test-method status="PASS" signature="browserName()[pri:0, instance:sal79_campaign.SAL81AttachDocument@192d3247]" name="browserName" is-config="true" duration-ms="10" started-at="2021-04-05T05:26:30 IST" finished-at="2021-04-05T05:26:30 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserName -->
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:sal52_automation.SAL57VerifyiAppStore@192d3247]" name="openBrowser" is-config="true" duration-ms="4488" started-at="2021-04-04T10:35:14 IST" finished-at="2021-04-04T10:35:19 IST">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:sal79_campaign.SAL81AttachDocument@192d3247]" name="openBrowser" is-config="true" duration-ms="7725" started-at="2021-04-05T05:26:30 IST" finished-at="2021-04-05T05:26:38 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="verifyiApp()[pri:0, instance:sal52_automation.SAL57VerifyiAppStore@192d3247]" name="verifyiApp" duration-ms="10132" started-at="2021-04-04T10:35:19 IST" finished-at="2021-04-04T10:35:29 IST">
+        <test-method status="PASS" signature="attachDoc()[pri:0, instance:sal79_campaign.SAL81AttachDocument@192d3247]" name="attachDoc" duration-ms="27937" started-at="2021-04-05T05:26:38 IST" finished-at="2021-04-05T05:27:06 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyiApp -->
-      </class> <!-- sal52_automation.SAL57VerifyiAppStore -->
+        </test-method> <!-- attachDoc -->
+      </class> <!-- sal79_campaign.SAL81AttachDocument -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
