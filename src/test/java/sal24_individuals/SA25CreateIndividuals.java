@@ -35,6 +35,8 @@ public class SA25CreateIndividuals {
 		driver.findElementByXPath("//div[@class='slds-icon-waffle']").click();
 		driver.findElementByXPath("//button[text()='View All']").click();
 		
+		
+		
 		WebElement ind = driver.findElementByXPath("//p[text()='Individuals']");
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("arguments[0].click()", ind);

@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="sal52_automation.SAL59DwldPDF">
+      <class name="transactpd.TsopTransactpd">
         <methods>
-          <include name="downloadPDF"/>
-          <include name="openBrowser"/>
+          <include name="launchApplication"/>
+          <include name="getSaveValues"/>
         </methods>
-      </class> <!-- sal52_automation.SAL59DwldPDF -->
+      </class> <!-- transactpd.TsopTransactpd -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
